@@ -12,9 +12,9 @@ class HomeMainLayout extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.network(
-            'https://gdb.voanews.com/79D92D70-34A8-4C32-BEF9-BE5E8F7C0C1A_w1023_r1_s.jpg',
+            'https://static.republika.co.id/uploads/images/inpicture_slide/karakter-dalam-manga-jujutsu_220814165159-134.jpg',
             fit: BoxFit.cover,
-            height: 200,
+            height: 400,
             width: double.infinity,
           ),
           const SizedBox(height: 8),
@@ -31,11 +31,20 @@ class HomeMainLayout extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Column(
-            children: List.generate(
-                10,
+            children: [
+              ...List.generate(
+                5,
                 (index) => const NewsCard(
-                      title: "Testing",
-                    )),
+                  title: "Testing NewsCard",
+                ),
+              ),
+              ...List.generate(
+                5,
+                (index) => const NewsCard2(
+                  title: "Testing NewsCard2",
+                ),
+              ),
+            ],
           ),
         ],
       ),
